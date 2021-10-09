@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    justify-content: space-between;
+    color: #00ffff
+}
+
+.title__navbar {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
+
+.navbar__menu {
+    letter-spacing: 5px;
+}
+
+a {
+    border-right: 1px solid #fff;
+    text-decoration: none;
+    margin: 7px;
+    padding: 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #00ffff
+}

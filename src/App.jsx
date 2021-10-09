@@ -1,13 +1,12 @@
 
 import './App.css'
 import Navbar from './Components/Navbar'
-import Reduccer from './Components/Reduccer'
-
+import Contactos from './Components/Contactos'
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Reduccer />
+      <Contactos />
     </div>
   )
 }
