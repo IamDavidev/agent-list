@@ -25,9 +25,11 @@ body {
   letter-spacing: 5px;
 }
 a{
+  border-right: 1px solid #fff;
   text-decoration: none;
   margin:7px;
-  font-size: 17px;
+  padding:4px;
+  font-size: 15px;
   text-transform:uppercase;   
   color:#00ffff
 }
