@@ -1,3 +1,5 @@
+import './index.css'
+
 const Contactos = () => {
   return (
     <div className="list__contacts">
