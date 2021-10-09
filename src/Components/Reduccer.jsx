@@ -1,7 +1,3 @@
-
-
-
-
 const Reduccer = () => {
   return (
     <div className="reduccer__app">
