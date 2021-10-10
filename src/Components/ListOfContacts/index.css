@@ -9,10 +9,19 @@ th {
 
 
 @media screen and (max-width:500px){
+    h1{
+        text-align:center;
+    }
+    a{
+        border:1px solid #fff;
+        font-size:10px;
+        display:block;
+        text-align:center;
+    }
     .contacts{
         display:grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 1fr;
+        grid-template-rows: 300px 1fr;
     }
     .form__contacts{
         grid-row-start: 1;

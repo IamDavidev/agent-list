@@ -1,4 +1,5 @@
 import './index.css';
+import FormContacts from '../FormContacts'
 const ListOfContacts = () => {
   return (
     <div className="contacts">
@@ -20,11 +21,7 @@ const ListOfContacts = () => {
             </tr>
         </tbody>
       </table>
-      <div className="form__contacts">
-        <h1>
-          form
-        </h1>
-      </div>
+      <FormContacts />
     </div>
   );
 };
