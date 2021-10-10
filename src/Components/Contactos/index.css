@@ -1,9 +1,9 @@
 .list__contacts{
-   display:flex;
+   /* display:flex; */
 }
 
 h1{
     text-transform:uppercase;
     letter-spacing: 7px;
-    
+    display:block;
 }

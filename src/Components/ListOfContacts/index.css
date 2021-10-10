@@ -1,0 +1,20 @@
+.contacts{
+    display:grid;
+    grid-template-columns: 1fr 200px;
+}
+
+th {
+    color: white;
+}
+
+
+@media screen and (max-width:500px){
+    .contacts{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+    .form__contacts{
+        grid-row-start: 1;
+    }
+}
