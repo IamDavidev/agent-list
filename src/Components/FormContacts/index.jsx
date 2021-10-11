@@ -1,6 +1,6 @@
 import './index.css'
 
-const FormContacts = () => {
+const FormContacts = ({props}) => {
   return (
     <div className="form__contacts">
       <h2 className="title__contacts">contacts xd</h2>

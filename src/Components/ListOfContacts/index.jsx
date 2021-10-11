@@ -1,6 +1,9 @@
 import './index.css';
-import FormContacts from '../FormContacts'
+import FormContacts from '../FormContacts';
 const ListOfContacts = () => {
+  const contacts = [
+    { id: 21321685,name: 'david' ,number: '772131031065'},
+  ];
   return (
     <div className="contacts">
       <table className="table__contacts">
@@ -13,12 +16,15 @@ const ListOfContacts = () => {
           </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-            </tr>
+          <tr>
+          {contacts.map(({ id, name, number }) => (
+            <>
+              <td>{id}</td>
+              <td>{name}</td>
+              <td>{number}</td>
+            </>
+          ))}
+          </tr>
         </tbody>
       </table>
       <FormContacts />
