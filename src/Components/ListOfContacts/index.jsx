@@ -1,9 +1,7 @@
 import './index.css';
 import FormContacts from '../FormContacts';
 const ListOfContacts = () => {
-  const contacts = [
-    { id: 21321685,name: 'david' ,number: '772131031065'},
-  ];
+  const contacts = [{ id: 21321685, name: 'david', number: '772131031065' }];
   return (
     <div className="contacts">
       <table className="table__contacts">
@@ -16,15 +14,13 @@ const ListOfContacts = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
           {contacts.map(({ id, name, number }) => (
-            <>
+            <tr key={id}>
               <td>{id}</td>
               <td>{name}</td>
               <td>{number}</td>
-            </>
+            </tr>
           ))}
-          </tr>
         </tbody>
       </table>
       <FormContacts />
