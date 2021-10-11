@@ -1,7 +1,13 @@
+import React, {useReducer} from 'react'
+
 import './index.css';
+import Contacts from '../../services/contacts';
 import FormContacts from '../FormContacts';
+import { ContactsReducer } from '../../reducers/ContactsReducer';
 const ListOfContacts = () => {
-  const contacts = [{ id: 21321685, name: 'david', number: '772131031065' }];
+  
+  const [state,dispatch] = useReducer(ContactsReducer, Contacts) 
+  
   return (
     <div className="contacts">
       <table className="table__contacts">
@@ -14,11 +20,12 @@ const ListOfContacts = () => {
           </tr>
         </thead>
         <tbody>
-          {contacts.map(({ id, name, number }) => (
+          {Contacts.map(({ id, name, number }) => (
             <tr key={id}>
               <td>{id}</td>
               <td>{name}</td>
               <td>{number}</td>
+              <button>{'❌'}</button>
             </tr>
           ))}
         </tbody>

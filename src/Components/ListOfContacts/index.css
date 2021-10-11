@@ -21,9 +21,23 @@ th {
     .contacts{
         display:grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 300px 1fr;
+        grid-template-rows: 200px 1fr;
     }
     .form__contacts{
         grid-row-start: 1;
+    }
+    td{
+        font-size:13px;
+        text-align:center;
+        border-right:1px solid #0ff;
+        border-left:1px solid #0ff;
+        max-width: 100px;
+    }
+    button{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction:column;
+        margin:auto;
     }
 }

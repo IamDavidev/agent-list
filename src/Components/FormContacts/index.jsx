@@ -6,11 +6,13 @@ const FormContacts = ({props}) => {
       <h2 className="title__contacts">contacts xd</h2>
       <form>
           <label>
-             Name : <input type="text" placeholder='Add name'   autoFocus />
+             Name : <br /><input type="text" placeholder='Add name'   autoFocus />
           </label>
+          <br />
           <label >
-              Number: <input type='text' placeholder='add Number'    autoFocus/>
+              Number: <br /><input type='text' placeholder='add Number'    autoFocus/>
           </label>
+          <br />
           <button className="form__button">
               add contact
           </button>
