@@ -1,5 +1,5 @@
-.contacts{
-    display:grid;
+.contacts {
+    display: grid;
     grid-template-columns: 1fr 300px;
 }
 
@@ -7,37 +7,58 @@ th {
     color: rgb(231, 10, 10);
 }
 
+td {
+    font-size: 13px;
+    text-align: center;
+    border-right: 1px solid #0ff;
+    border-left: 1px solid #0ff;
+    max-width: 100px;
+}
 
-@media screen and (max-width:500px){
-    h1{
-        text-align:center;
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+@media screen and (max-width:500px) {
+    h1 {
+        text-align: center;
     }
-    a{
-        border:1px solid #fff;
-        font-size:10px;
-        display:block;
-        text-align:center;
+
+    a {
+        border: 1px solid #fff;
+        font-size: 10px;
+        display: block;
+        text-align: center;
     }
-    .contacts{
-        display:grid;
+
+    .contacts {
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 200px 1fr;
     }
-    .form__contacts{
+
+    .form__contacts {
         grid-row-start: 1;
     }
-    td{
-        font-size:13px;
-        text-align:center;
-        border-right:1px solid #0ff;
-        border-left:1px solid #0ff;
+
+    td {
+        font-size: 13px;
+        text-align: center;
+        border-right: 1px solid #0ff;
+        border-left: 1px solid #0ff;
         max-width: 100px;
     }
-    button{
-        display:flex;
+
+    button {
+        display: flex;
         justify-content: center;
-        align-items:center;
-        flex-direction:column;
-        margin:auto;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
     }
 }

@@ -1,13 +1,12 @@
-import React, {useReducer} from 'react'
+import React, { useReducer } from 'react';
 
 import './index.css';
 import Contacts from '../../services/contacts';
 import FormContacts from '../FormContacts';
 import { ContactsReducer } from '../../reducers/ContactsReducer';
 const ListOfContacts = () => {
-  
-  const [state,dispatch] = useReducer(ContactsReducer, Contacts) 
-  
+  const [state, dispatch] = useReducer(ContactsReducer, Contacts);
+
   return (
     <div className="contacts">
       <table className="table__contacts">
