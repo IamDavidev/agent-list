@@ -6,7 +6,6 @@ import FormContacts from '../FormContacts';
 import { ContactsReducer } from '../../reducers/ContactsReducer';
 const ListOfContacts = () => {
   const [state, dispatch] = useReducer(ContactsReducer, Contacts);
-
   return (
     <div className="contacts">
       <table className="table__contacts">
@@ -19,17 +18,19 @@ const ListOfContacts = () => {
           </tr>
         </thead>
         <tbody>
-          {Contacts.map(({ id, name, number }) => (
+          {state.map(({ id, name, number }) => (
             <tr key={id}>
               <td>{id}</td>
               <td>{name}</td>
               <td>{number}</td>
-              <button>{'❌'}</button>
+              <td>
+                <button>{'❌'}</button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <FormContacts />
+      <FormContacts dispatch={dispatch} />
     </div>
   );
 };
