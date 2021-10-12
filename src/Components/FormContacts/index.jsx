@@ -1,27 +1,10 @@
-import { useState } from 'react';
 import './index.css';
+import HandleForm from '../../helpers/handleForm';
 
 const FormContacts = (props) => {
   const { dispatch } = props;
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleNumber = (e)=>{
-    setNumber(e.target.value);
-  }
-
-  const newContact = {
-    type: 'addContact',
-    payload: {
-      id: 72834982,
-      name: name,
-      number: number,
-    },
-  };
-
+  
+  const {handleName, handleNumber,newContact,handleDelete } = HandleForm()
   const handleAdd = (evt) => {
     evt.preventDefault();
     -dispatch(newContact);
@@ -36,7 +19,7 @@ const FormContacts = (props) => {
           <input
             name="number"
             onChange={handleName}
-            value={name}
+            // value={name}
             type="text"
             placeholder="Add name"
             autoFocus
@@ -50,14 +33,14 @@ const FormContacts = (props) => {
             type="text"
             onChange={handleNumber}
             name="number"
-            value={number}
+            // value={number}
             placeholder="add Number"
             autoFocus
             required
           />
         </label>
         <br />
-        <button className="form__button">add contact</button>
+      <button  className="form__button">add Contact</button>
       </form>
     </div>
   );

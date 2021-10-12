@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-
+import {handleDelete} from '../../helpers/handleForm';
 import './index.css';
 import Contacts from '../../services/contacts';
 import FormContacts from '../FormContacts';
@@ -24,7 +24,7 @@ const ListOfContacts = () => {
               <td>{name}</td>
               <td>{number}</td>
               <td>
-                <button>{'❌'}</button>
+                <button onClick={()=>onDelete(id)}>{'❌'}</button>
               </td>
             </tr>
           ))}
