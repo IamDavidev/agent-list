@@ -1,19 +1,27 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import HandleForm from '../../helpers/handleForm';
+import init from '../../helpers/LocalStorage';
 import './index.css';
-import Contacts from '../../services/contacts';
 import FormContacts from '../FormContacts';
 import { ContactsReducer } from '../../reducers/ContactsReducer';
-const ListOfContacts = () => {
-  const [state, dispatch] = useReducer(ContactsReducer, []);
 
+
+const ListOfContacts = () => {
+  //reducer
+  const [state, dispatch] = useReducer(ContactsReducer, [],init);
+  //useEffect for localStorage
+  useEffect(() => {
+ localStorage.setItem('contacts', JSON.stringify(state))
+  }, [state]);
+
+  console.log(JSON.parse(localStorage.getItem('contacts')));
+  //delete contact
   const handleDelete = (id) => {
     const objDelete = {
       type: 'delete',
-      payload: id
-    }
+      payload: id,
+    };
     dispatch(objDelete);
-
   };
 
   return (
@@ -40,7 +48,7 @@ const ListOfContacts = () => {
           ))}
         </tbody>
       </table>
-      <FormContacts dispatch={dispatch}/>
+      <FormContacts dispatch={dispatch} />
     </div>
   );
 };

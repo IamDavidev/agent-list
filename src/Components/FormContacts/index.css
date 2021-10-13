@@ -1,24 +1,26 @@
-/* .form__contacts{
+.form__contacts{
     display:flex;
     align-items:center;
     flex-direction:column;
 }
-.title__contacts{
-    display:inline-block;
+ .title__contacts{
+     color:#0ff;
+     letter-spacing:5px;
 }
-label {
-    display: inline-block;
-    text-align: center;
-}
+@media screen and (max-width:500px){
+    
+input{
+    padding: 7px;
+    margin:3px;
+    color:#0ff;
+    display:block;
 
-input {
-    margin: 3px;
-    color: #0ff;
-    padding: 3px;
-} 
-.form__button{
-    display:inline-block;
-    padding:5px;
-    margin:10px;
-    width:100px;
-} */
+}
+ button{
+     font-weight: bold;
+     color:rgb(235, 235, 235);
+     padding:10px;
+     border:1px solid #0ff
+ }
+
+}

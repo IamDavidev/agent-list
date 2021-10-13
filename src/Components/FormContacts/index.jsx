@@ -8,10 +8,10 @@ const FormContacts = ({dispatch}) => {
 
   return (
     <div className="form__contacts">
-      <h2 className="title__contacts">contacts xd</h2>
+      <h2 className="title__contacts"> Add </h2>
       <form onSubmit={handleAdd} autoComplete="off">
         <label>
-          Name : <br />
+          Name : 
           <input
             name="number"
             onChange={handleName}
@@ -24,7 +24,7 @@ const FormContacts = ({dispatch}) => {
         </label>
         <br />
         <label>
-          Number: <br />
+          Number: 
           <input
             type="number"
             onChange={handleNumber}
