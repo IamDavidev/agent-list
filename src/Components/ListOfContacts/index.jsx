@@ -6,7 +6,20 @@ import FormContacts from '../FormContacts';
 import { ContactsReducer } from '../../reducers/ContactsReducer';
 const ListOfContacts = () => {
   const [state, dispatch] = useReducer(ContactsReducer, Contacts);
-  const {handleDelete} = HandleForm()
+
+  const objdelete = { 
+    type:'delete',
+    payload:{
+      id:id
+    }
+  }
+  const handleDelete = (id) => {
+    const objDelete = {
+      type: 'delete',
+      payload: id,
+    };
+  };
+
   return (
     <div className="contacts">
       <table className="table__contacts">

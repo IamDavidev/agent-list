@@ -1,15 +1,16 @@
 import './index.css';
 import HandleForm from '../../helpers/handleForm';
 
-const FormContacts = (props) => {
-  const { dispatch } = props;
-  
-  const {handleName, handleNumber,newContact } = HandleForm()
+const FormContacts = (dispatch) => {
+  console.log(dispatch);
+  const { handleName, handleNumber, newContact } = HandleForm();
+
   const handleAdd = (evt) => {
     evt.preventDefault();
-    -dispatch(newContact);
+    dispatch(newContact);
     console.log(newContact);
   };
+
   return (
     <div className="form__contacts">
       <h2 className="title__contacts">contacts xd</h2>
@@ -40,7 +41,7 @@ const FormContacts = (props) => {
           />
         </label>
         <br />
-      <button  className="form__button">add Contact</button>
+        <button className="form__button">add Contact</button>
       </form>
     </div>
   );
