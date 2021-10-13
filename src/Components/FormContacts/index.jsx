@@ -4,7 +4,7 @@ import HandleForm from '../../helpers/handleForm';
 const FormContacts = (props) => {
   const { dispatch } = props;
   
-  const {handleName, handleNumber,newContact,handleDelete } = HandleForm()
+  const {handleName, handleNumber,newContact } = HandleForm()
   const handleAdd = (evt) => {
     evt.preventDefault();
     -dispatch(newContact);
@@ -30,7 +30,7 @@ const FormContacts = (props) => {
         <label>
           Number: <br />
           <input
-            type="text"
+            type="number"
             onChange={handleNumber}
             name="number"
             // value={number}

@@ -1,16 +1,18 @@
 import React, { useReducer } from 'react';
-import {handleDelete} from '../../helpers/handleForm';
+import HandleForm from '../../helpers/handleForm';
 import './index.css';
 import Contacts from '../../services/contacts';
 import FormContacts from '../FormContacts';
 import { ContactsReducer } from '../../reducers/ContactsReducer';
 const ListOfContacts = () => {
   const [state, dispatch] = useReducer(ContactsReducer, Contacts);
+  const {handleDelete} = HandleForm()
   return (
     <div className="contacts">
       <table className="table__contacts">
         <thead>
           <tr>
+          
             <th>ID</th>
             <th>name</th>
             <th>number</th>
@@ -24,7 +26,7 @@ const ListOfContacts = () => {
               <td>{name}</td>
               <td>{number}</td>
               <td>
-                <button onClick={()=>onDelete(id)}>{'❌'}</button>
+                <button onClick={()=>handleDelete(id)}>{'❌'}</button>
               </td>
             </tr>
           ))}
