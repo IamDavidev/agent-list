@@ -1,15 +1,10 @@
 import './index.css';
 import HandleForm from '../../helpers/handleForm';
 
-const FormContacts = (dispatch) => {
-  console.log(dispatch);
-  const { handleName, handleNumber, newContact } = HandleForm();
+const FormContacts = ({dispatch}) => {
+  const { handleName, handleNumber,handleAdd } = HandleForm({dispatch:dispatch});
 
-  const handleAdd = (evt) => {
-    evt.preventDefault();
-    dispatch(newContact);
-    console.log(newContact);
-  };
+  
 
   return (
     <div className="form__contacts">
