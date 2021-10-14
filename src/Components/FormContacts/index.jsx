@@ -1,17 +1,17 @@
 import './index.css';
 import HandleForm from '../../helpers/handleForm';
 
-const FormContacts = ({dispatch}) => {
-  const { handleName, handleNumber,handleAdd } = HandleForm({dispatch:dispatch});
-
-  
+const FormContacts = ({ dispatch }) => {
+  const { handleName, handleNumber, handleAdd } = HandleForm({
+    dispatch: dispatch,
+  });
 
   return (
     <div className="form__contacts">
       <h2 className="title__contacts"> Add </h2>
-      <form onSubmit={handleAdd} autoComplete="off">
+      <form reset autoComplete="off">
         <label>
-          Name : 
+          Name :
           <input
             name="number"
             onChange={handleName}
@@ -20,11 +20,12 @@ const FormContacts = ({dispatch}) => {
             placeholder="Add name"
             autoFocus
             required
+            reset
           />
         </label>
         <br />
         <label>
-          Number: 
+          Number:
           <input
             type="number"
             onChange={handleNumber}
@@ -33,10 +34,13 @@ const FormContacts = ({dispatch}) => {
             placeholder="add Number"
             autoFocus
             required
+            reset
           />
         </label>
         <br />
-        <button className="form__button">add Contact</button>
+        <button onClick={handleAdd} className="form__button">
+          add
+        </button>
       </form>
     </div>
   );
