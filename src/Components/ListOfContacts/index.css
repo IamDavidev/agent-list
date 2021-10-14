@@ -6,7 +6,7 @@
 
 th {
     color: rgb(8, 9, 94);
-    font-size:30px
+    font-size: 30px
 }
 
 
@@ -14,7 +14,7 @@ td {
     font-size: 20px;
     text-align: center;
     max-width: 100px;
-    border-bottom:1px solid #0ff
+    border-bottom: 1px solid #0ff
 }
 
 button {
@@ -32,6 +32,11 @@ input {
     font-size: 20px
 }
 
+label {
+    font-size: 20px;
+
+}
+
 @media screen and (max-width:500px) {
     h1 {
         text-align: center;
@@ -47,7 +52,7 @@ input {
     .contacts {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 270px 1fr;
+        grid-template-rows: 350px 1fr;
     }
 
     .form__contacts {
@@ -74,17 +79,19 @@ input {
     .contacts {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 310px 1fr;
+        grid-template-rows: 350px 1fr;
     }
 
     .form__contacts {
         grid-row-start: 1;
     }
-    th{
-        font-size:30px
+
+    th {
+        font-size: 30px
     }
+
     button {
-        padding:10px;
-        font-size:30px
+        padding: 10px;
+        font-size: 30px
     }
 }
