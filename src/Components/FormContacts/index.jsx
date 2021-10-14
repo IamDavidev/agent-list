@@ -9,7 +9,7 @@ const FormContacts = ({ dispatch }) => {
   return (
     <div className="form__contacts">
       <h2 className="title__contacts"> Add </h2>
-      <form reset autoComplete="off">
+      <form onSubmit={handleAdd} autoComplete="off">
         <label>
           Name :
           <input
@@ -20,7 +20,7 @@ const FormContacts = ({ dispatch }) => {
             placeholder="Add name"
             autoFocus
             required
-            reset
+            
           />
         </label>
         <br />
@@ -34,11 +34,11 @@ const FormContacts = ({ dispatch }) => {
             placeholder="add Number"
             autoFocus
             required
-            reset
+        
           />
         </label>
         <br />
-        <button onClick={handleAdd} className="form__button">
+        <button className="form__button">
           add
         </button>
       </form>

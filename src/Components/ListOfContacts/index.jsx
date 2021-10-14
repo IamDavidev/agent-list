@@ -14,7 +14,7 @@ const ListOfContacts = () => {
  localStorage.setItem('contacts', JSON.stringify(state))
   }, [state]);
 
-  console.log(JSON.parse(localStorage.getItem('contacts')));
+  // console.log(JSON.parse(localStorage.getItem('contacts')));
   //delete contact
   const handleDelete = (id) => {
     const objDelete = {
