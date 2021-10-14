@@ -15,6 +15,7 @@ const ListOfContacts = () => {
   }, [state]);
 
   // console.log(JSON.parse(localStorage.getItem('contacts')));
+  
   //delete contact
   const handleDelete = (id) => {
     const objDelete = {

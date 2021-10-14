@@ -22,9 +22,14 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: auto;
+    margin: auto;        
+    font-size: 10px;
+    padding:10px
 }
-
+.form__button{
+    font-size:20px; 
+    padding:5px;
+} 
 input {
     padding: 12px;
     display: block;
@@ -71,6 +76,8 @@ label {
         align-items: center;
         flex-direction: column;
         margin: auto;
+        font-size:10px;
+        padding:15px
     }
 }
 
@@ -91,7 +98,7 @@ label {
     }
 
     button {
-        padding: 10px;
-        font-size: 30px
+        padding: 15px;
+        font-size: 10px
     }
 }
