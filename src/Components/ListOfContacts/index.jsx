@@ -33,7 +33,7 @@ const ListOfContacts = () => {
             <th>ID</th>
             <th>name</th>
             <th>number</th>
-            <th>eliminar</th>
+            <th>delete</th>
           </tr>
         </thead>
         <tbody>
