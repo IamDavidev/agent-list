@@ -79,7 +79,7 @@ label {
     .contacts {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 350px 1fr;
+        grid-template-rows: 360px 1fr;
     }
 
     .form__contacts {
